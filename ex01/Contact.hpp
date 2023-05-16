@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 15:26:04 by microdri          #+#    #+#             */
-/*   Updated: 2023/05/16 14:47:52 by microdri         ###   ########.fr       */
+/*   Updated: 2023/05/16 17:06:37 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,15 @@ class Contact
 		~Contact( void );
 	
 		void 		setFirstName( std::string value );
-		std::string getFirstName( void );
 		void 		setLastName( std::string value );
+		void 		setNickname( std::string value );
+		void 		setPhoneNumber( std::string value );
+		void 		setDarkestSecret( std::string value );
+		std::string getFirstName( void );
 		std::string getLastName( void );
+		std::string getNickname( void );
+		std::string getPhoneNumber( void );
+		std::string getDarkestSecret( void );
 
 	private:
 

@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 13:33:49 by microdri          #+#    #+#             */
-/*   Updated: 2023/05/16 14:35:14 by microdri         ###   ########.fr       */
+/*   Updated: 2023/05/16 17:43:19 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ class PhoneBook
 	
 		Contact person[8];
 		void add( void );
-		void search(int index);
-		void exit(void);
+		void search( void );
 
 	private:
 
