@@ -1,4 +1,5 @@
-SRCS			=	PhoneBook.cpp \
+SRCS			=	main.cpp \
+					PhoneBook.cpp \
 					Contact.cpp
 					
 NAME			= MyAwesomePhoneBook
