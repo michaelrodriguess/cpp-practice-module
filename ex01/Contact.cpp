@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 14:02:27 by microdri          #+#    #+#             */
-/*   Updated: 2023/05/16 17:15:09 by microdri         ###   ########.fr       */
+/*   Updated: 2023/05/17 15:07:55 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 
 Contact::Contact( void )
 {
-//	std::cout << "Contact Constructor called" << std::endl;
+	std::cout << "Contact Constructor called" << std::endl;
 	return ;
 }
 
 Contact::~Contact( void )
 {
-//	std::cout << "Contact Destructor called" << std::endl;
+	std::cout << "Contact Destructor called" << std::endl;
 }
 
 // Setters

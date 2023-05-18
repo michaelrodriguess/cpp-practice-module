@@ -6,23 +6,24 @@
 /*   By: microdri <microdri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 13:33:30 by microdri          #+#    #+#             */
-/*   Updated: 2023/05/16 18:06:45 by microdri         ###   ########.fr       */
+/*   Updated: 2023/05/18 16:30:15 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include <string>
+#include <iomanip>
 
 PhoneBook::PhoneBook( void )
 {
-	//std::cout << "PhoneBook Constructor called" << std::endl;
+	std::cout << "PhoneBook Constructor called" << std::endl;
 	this->indexPerson = 0;
 	return ;
 }
 
 PhoneBook::~PhoneBook( void )
 {
-//	std::cout << "PhoneBook Destructor called" << std::endl;
+	std::cout << "PhoneBook Destructor called" << std::endl;
 }
 
 void PhoneBook::add( void )
@@ -63,10 +64,23 @@ void PhoneBook::add( void )
 		std::getline( std::cin, input);
 		this->person[indexPerson].setDarkestSecret(input);
 	}
+	// limitar oito contator por aplicacao.
 	this->indexPerson += 1;
 	
 	return ;
 }
+
+// metodo do phonebook onde vai retornar uma string cortada! se ela for maior que dez caracteres diz o guedes.
+
+/*
+std::string PhoneBook::cutString( std::string str )
+{
+	if (minhaString.length() > 10) {
+        minhaString[9] = '.';
+    }
+	isto substituira a linha 93. devo passar como parametro o metodo get
+}
+*/
 
 void	PhoneBook::search( void )
 {
@@ -75,25 +89,26 @@ void	PhoneBook::search( void )
 
 	for (int i = 0; i < indexPerson; i++)
 	{
-		std::cout << this->person[i].getFirstName() << std::endl;
-		std::cout << this->person[i].getLastName() << std::endl;
- 		std::cout << this->person[i].getNickname() << std::endl;
-		std::cout << this->person[i].getPhoneNumber() << std::endl;
-		std::cout << this->person[i].getDarkestSecret() << std::endl;
+		std::cout << std::setw(10) << i << "|";
+		std::cout << std::setw(10) << this->person[i].getFirstName().substr(0, 9) + "." << "| "; 
+
+		std::cout << std::setw(10) << this->person[i].getLastName() << "|";
+ 		std::cout << std::setw(10) << this->person[i].getNickname() << "|";
+		std::cout << std::setw(10) << this->person[i].getPhoneNumber() << "|" << std::endl;
 	} //  ajeitar do jeito que o pdf pede!
 
-	// tentar printar quando escolhe o numero a pessoa que quer no phonenumber
 	int i = 0;
-	std::cout << "which number do you need" << std::endl;
-	std::getline( std::cin, input);
+	std::cout << "which number do you need: ";
+	std::getline( std::cin, input );
 	i = std::stoi(input);
-	if (i == indexPerson)
+	if ( i <= indexPerson && indexPerson >= 0 )
 	{
-		std::cout << this->person[indexPerson].getFirstName() << std::endl;
-		std::cout << this->person[indexPerson].getLastName() << std::endl;
- 		std::cout << this->person[indexPerson].getNickname() << std::endl;
-		std::cout << this->person[indexPerson].getPhoneNumber() << std::endl;
-		std::cout << this->person[indexPerson].getDarkestSecret() << std::endl;
+		std::cout << "Index: " << i << std::endl;
+		std::cout << "First Name: " << this->person[i].getFirstName() << std::endl;
+		std::cout << "Last Name: " << this->person[i].getLastName() << std::endl;
+ 		std::cout << "Nickname: " << this->person[i].getNickname() << std::endl;
+		std::cout << "Phone Number: " << this->person[i].getPhoneNumber() << std::endl;
+		std::cout << "Darkest Secret: " << this->person[i].getDarkestSecret() << std::endl;
 	}
 }
 
