@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 13:33:30 by microdri          #+#    #+#             */
-/*   Updated: 2023/05/18 16:30:15 by microdri         ###   ########.fr       */
+/*   Updated: 2023/05/19 17:30:50 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,15 +72,14 @@ void PhoneBook::add( void )
 
 // metodo do phonebook onde vai retornar uma string cortada! se ela for maior que dez caracteres diz o guedes.
 
-/*
 std::string PhoneBook::cutString( std::string str )
 {
-	if (minhaString.length() > 10) {
-        minhaString[9] = '.';
-    }
-	isto substituira a linha 93. devo passar como parametro o metodo get
+	std::string formatStr;
+
+	if (str.length() > 10)
+		formatStr = str.substr( 0, 9 ) + ".";
+	return ( formatStr );
 }
-*/
 
 void	PhoneBook::search( void )
 {
@@ -90,12 +89,11 @@ void	PhoneBook::search( void )
 	for (int i = 0; i < indexPerson; i++)
 	{
 		std::cout << std::setw(10) << i << "|";
-		std::cout << std::setw(10) << this->person[i].getFirstName().substr(0, 9) + "." << "| "; 
-
-		std::cout << std::setw(10) << this->person[i].getLastName() << "|";
- 		std::cout << std::setw(10) << this->person[i].getNickname() << "|";
-		std::cout << std::setw(10) << this->person[i].getPhoneNumber() << "|" << std::endl;
-	} //  ajeitar do jeito que o pdf pede!
+		std::cout << std::setw(10) << cutString(this->person[i].getFirstName()) << "|"; 
+		std::cout << std::setw(10) << cutString(this->person[i].getLastName()) << "|";
+ 		std::cout << std::setw(10) << cutString(this->person[i].getNickname()) << "|";
+		std::cout << std::setw(10) << cutString(this->person[i].getPhoneNumber()) << "|" << std::endl;
+	}
 
 	int i = 0;
 	std::cout << "which number do you need: ";
