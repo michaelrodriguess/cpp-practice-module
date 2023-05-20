@@ -78,6 +78,8 @@ std::string PhoneBook::cutString( std::string str )
 
 	if (str.length() > 10)
 		formatStr = str.substr( 0, 9 ) + ".";
+	else
+		formatStr = str;
 	return ( formatStr );
 }
 
@@ -98,6 +100,8 @@ void	PhoneBook::search( void )
 	int i = 0;
 	std::cout << "which number do you need: ";
 	std::getline( std::cin, input );
+	if (input.empty())
+		return ;
 	i = std::stoi(input);
 	if ( i <= indexPerson && indexPerson >= 0 )
 	{
