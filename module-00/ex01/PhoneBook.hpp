@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 13:33:49 by microdri          #+#    #+#             */
-/*   Updated: 2023/05/19 17:06:51 by microdri         ###   ########.fr       */
+/*   Updated: 2023/05/22 11:22:49 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ class PhoneBook
 	private:
 
 		int indexPerson;
+		int oldIndexPerson;
 };
 
 #endif

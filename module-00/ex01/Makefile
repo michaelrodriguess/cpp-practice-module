@@ -6,8 +6,8 @@ NAME			= MyAwesomePhoneBook
 OBJS			= $(SRCS:.cpp=.o)
 CPP				= c++
 RM				= rm -f
-##CFLAGS			= -Wall -Wextra -Werror -std=c++98 ##mac
-CFLAGS			= -Wall -Wextra -Werror -std=c++11 ##linux
+CFLAGS			= -Wall -Wextra -Werror -std=c++98 ##mac
+##CFLAGS			= -Wall -Wextra -Werror -std=c++11 ##linux
 
 
 $(NAME):	$(SRCS)
