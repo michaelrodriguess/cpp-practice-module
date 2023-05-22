@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: microdri <microdri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/16 13:33:49 by microdri          #+#    #+#             */
-/*   Updated: 2023/05/22 15:49:27 by microdri         ###   ########.fr       */
+/*   Created: 2023/05/22 19:19:22 by microdri          #+#    #+#             */
+/*   Updated: 2023/05/22 19:42:01 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#include "zombie.hpp"
 
-#include "Contact.hpp"
-#include <string>
-#include <iomanip>
+Zombie *zombieHorde( int N, std::string name );
 
-class PhoneBook
+int main()
 {
-	public:
-		
-		PhoneBook( void );
-		~PhoneBook( void );
+	int index = 10;
+
+	Zombie *tmp = zombieHorde(index, "Malvo");
 	
-		Contact person[8];
-		void add( void );
-		void search( void );
-		std::string cutString( std::string str );
-
-	private:
-
-		int indexPerson;
-		int oldIndexPerson;
-};
-
-#endif
+	for (int i = 0; i < index; i++)
+		tmp[i].announce();
+	delete[] tmp;
+}

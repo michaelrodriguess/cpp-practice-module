@@ -1,15 +1,15 @@
 SRCS			=	main.cpp \
-					PhoneBook.cpp \
-					Contact.cpp
+					srcs/zombie.cpp \
+					srcs/zombieHorde.cpp \
 					
-NAME			= MyAwesomePhoneBook
+NAME			= MoarBrainz
 OBJS			= $(SRCS:.cpp=.o)
-CPP				= c++
+CXX				= c++
 RM				= rm -f
-CFLAGS			= -Wall -Wextra -Werror -std=c++98 ##mac
+CFLAGS			= -Wall -Wextra -Werror -std=c++98 -I includes/
 
 $(NAME):	$(SRCS)
-		$(CPP) $(CFLAGS) $(SRCS) -o $(NAME)
+		$(CXX) $(CFLAGS) $(SRCS) -o $(NAME)
 
 all: $(NAME)
 

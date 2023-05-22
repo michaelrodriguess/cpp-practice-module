@@ -1,38 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: microdri <microdri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/16 13:33:49 by microdri          #+#    #+#             */
-/*   Updated: 2023/05/22 15:49:27 by microdri         ###   ########.fr       */
+/*   Created: 2023/05/22 16:55:54 by microdri          #+#    #+#             */
+/*   Updated: 2023/05/22 19:03:12 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#include "zombie.hpp"
 
-#include "Contact.hpp"
-#include <string>
-#include <iomanip>
-
-class PhoneBook
+Zombie *newZombie( std::string name )
 {
-	public:
-		
-		PhoneBook( void );
-		~PhoneBook( void );
+	Zombie *tmp = new Zombie(name);
 	
-		Contact person[8];
-		void add( void );
-		void search( void );
-		std::string cutString( std::string str );
-
-	private:
-
-		int indexPerson;
-		int oldIndexPerson;
-};
-
-#endif
+	return (tmp);
+}

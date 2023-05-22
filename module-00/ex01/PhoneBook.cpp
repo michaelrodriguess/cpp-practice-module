@@ -6,14 +6,11 @@
 /*   By: microdri <microdri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 13:33:30 by microdri          #+#    #+#             */
-/*   Updated: 2023/05/22 15:27:44 by microdri         ###   ########.fr       */
+/*   Updated: 2023/05/22 15:49:33 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-#include <string>
-#include <iomanip>
-#include <cctype>
 
 PhoneBook::PhoneBook( void )
 {

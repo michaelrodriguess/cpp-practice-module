@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: microdri <microdri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/16 13:33:49 by microdri          #+#    #+#             */
-/*   Updated: 2023/05/22 15:49:27 by microdri         ###   ########.fr       */
+/*   Created: 2023/05/22 16:22:38 by microdri          #+#    #+#             */
+/*   Updated: 2023/05/22 19:40:44 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#include "zombie.hpp"
 
-#include "Contact.hpp"
-#include <string>
-#include <iomanip>
-
-class PhoneBook
+Zombie::Zombie( void )
 {
-	public:
-		
-		PhoneBook( void );
-		~PhoneBook( void );
-	
-		Contact person[8];
-		void add( void );
-		void search( void );
-		std::string cutString( std::string str );
+	std::cout << this->NameZombie << "Constructor called" << std::endl;
+}
 
-	private:
+Zombie::~Zombie( void )
+{
+	std::cout << this->NameZombie << ": Destructor called" << std::endl;
+}
 
-		int indexPerson;
-		int oldIndexPerson;
-};
+void Zombie::announce( void )
+{
+	std::cout << this->NameZombie << ": BraiiiiiiinnnzzzZ..." << std::endl; 
+}
 
-#endif
+void Zombie::setNameZombie( std::string value )
+{
+	this->NameZombie = value;
+}

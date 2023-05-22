@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: microdri <microdri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/16 13:33:49 by microdri          #+#    #+#             */
-/*   Updated: 2023/05/22 15:49:27 by microdri         ###   ########.fr       */
+/*   Created: 2023/05/22 16:22:41 by microdri          #+#    #+#             */
+/*   Updated: 2023/05/22 19:34:53 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-#include "Contact.hpp"
-#include <string>
-#include <iomanip>
+# include <iostream>
 
-class PhoneBook
+class	Zombie
 {
 	public:
-		
-		PhoneBook( void );
-		~PhoneBook( void );
-	
-		Contact person[8];
-		void add( void );
-		void search( void );
-		std::string cutString( std::string str );
+
+		Zombie( void );
+		~Zombie( void );
+
+		void announce( void );
+		void setNameZombie( std::string value );
 
 	private:
 
-		int indexPerson;
-		int oldIndexPerson;
-};
+		std::string NameZombie;
 
+};
 #endif
