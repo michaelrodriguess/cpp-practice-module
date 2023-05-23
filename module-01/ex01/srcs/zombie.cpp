@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 16:22:38 by microdri          #+#    #+#             */
-/*   Updated: 2023/05/22 19:40:44 by microdri         ###   ########.fr       */
+/*   Updated: 2023/05/23 10:39:22 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Zombie::~Zombie( void )
 
 void Zombie::announce( void )
 {
-	std::cout << this->NameZombie << ": BraiiiiiiinnnzzzZ..." << std::endl; 
+	std::cout << this->NameZombie << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 void Zombie::setNameZombie( std::string value )
