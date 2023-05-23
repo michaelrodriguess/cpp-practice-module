@@ -1,9 +1,7 @@
 SRCS			=	main.cpp \
-					srcs/HumanA.cpp \
-					srcs/HumanB.cpp \
-					srcs/Weapon.cpp \
+				
 					
-NAME			= UnnecessaryViolence 
+NAME			= SedIsForLosers 
 OBJS			= $(SRCS:.cpp=.o)
 CXX				= c++
 RM				= rm -f
