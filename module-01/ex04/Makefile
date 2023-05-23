@@ -5,7 +5,7 @@ NAME			= SedIsForLosers
 OBJS			= $(SRCS:.cpp=.o)
 CXX				= c++
 RM				= rm -f
-CFLAGS			= -Wall -Wextra -Werror -std=c++98 -I includes/
+CFLAGS			= -Wall -Wextra -Werror -std=c++98
 
 $(NAME):	$(SRCS)
 		$(CXX) $(CFLAGS) $(SRCS) -o $(NAME)
