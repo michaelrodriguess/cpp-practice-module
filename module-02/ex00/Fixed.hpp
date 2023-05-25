@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/22 19:19:22 by microdri          #+#    #+#             */
-/*   Updated: 2023/05/25 12:09:39 by microdri         ###   ########.fr       */
+/*   Created: 2023/05/25 11:22:11 by microdri          #+#    #+#             */
+/*   Updated: 2023/05/25 11:27:29 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "zombie.hpp"
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
-Zombie *zombieHorde( int N, std::string name );
-
-int main()
+class Fixed
 {
-	int index = 1;
-	
-	if ( index < 0 )
-		return (0);
-	Zombie *tmp = zombieHorde(index, "Malvo");
-	
-	for (int i = 0; i < index; i++)
-		tmp[i].announce();
-	delete[] tmp;
-}
+    public:
+        Fixed( void );
+        ~Fixed( void );
+
+    private:
+
+
+};
+
+
+#endif

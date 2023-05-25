@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 18:51:05 by microdri          #+#    #+#             */
-/*   Updated: 2023/05/24 10:08:14 by microdri         ###   ########.fr       */
+/*   Updated: 2023/05/25 14:24:00 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,18 @@ int main(int argc, char **argv)
         std::string buf;
         
         fileInput.open(argv[1]);
-        fileOutput.open(filename+".replace");
-        while ( getline(fileInput, buf) )
+        if (fileInput.is_open())
         {
-            buf = replace(str1, str2, buf);   
-            fileOutput << buf << std::endl;
+            fileOutput.open(filename+".replace");
+            while ( getline(fileInput, buf) )
+            {
+                buf = replace(str1, str2, buf);   
+                fileOutput << buf << std::endl;
+            }
+            fileInput.close();
+            fileOutput.close();
         }
-        fileInput.close();
-        fileOutput.close();
+        else
+            std::cout << "Error with file parameter" << std::endl;
     }
 }
