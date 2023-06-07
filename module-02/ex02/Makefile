@@ -1,4 +1,5 @@
 SRCS			=	main.cpp \
+					Fixed.cpp \
 					
 NAME			=  a.out
 OBJS			= $(SRCS:.cpp=.o)

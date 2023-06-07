@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 16:11:14 by microdri          #+#    #+#             */
-/*   Updated: 2023/06/06 18:42:31 by microdri         ###   ########.fr       */
+/*   Updated: 2023/06/07 11:06:58 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FIXED_HPP
 
 #include <iostream>
+#include <cmath>
 
 class Fixed
 {

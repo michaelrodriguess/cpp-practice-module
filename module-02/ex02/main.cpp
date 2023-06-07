@@ -6,7 +6,17 @@
 /*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 19:12:19 by microdri          #+#    #+#             */
-/*   Updated: 2023/06/06 19:12:19 by microdri         ###   ########.fr       */
+/*   Updated: 2023/06/07 15:45:37 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Fixed.hpp"
+
+int main( void )
+{
+    Fixed a(1);
+    Fixed b(2);
+
+    if (a > b)
+        std::cout << "lalalal" << std::endl;
+}

@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 16:15:15 by microdri          #+#    #+#             */
-/*   Updated: 2023/06/06 18:46:50 by microdri         ###   ########.fr       */
+/*   Updated: 2023/06/07 11:06:42 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Fixed::Fixed( const int valueInt )
 Fixed::Fixed( const float valueFloat )
 {
     std::cout << "Constructor float called" << std::endl;
-    this->_valueFixedPoint = valueFloat * (1 << _numberFractionalBit);
+    this->_valueFixedPoint = roundf(valueFloat * (1 << _numberFractionalBit));
 }
 
 /* Convert to Integer */
@@ -48,7 +48,7 @@ int Fixed::toInt( void ) const
 /* Convert to Float */
 float   Fixed::toFloat( void ) const
 {
-    float retValue = (float)_valueFixedPoint / (float)(1 << _numberFractionalBit);
+    float retValue = _valueFixedPoint / (float)(1 << _numberFractionalBit);
     return ( retValue );
 }
 
