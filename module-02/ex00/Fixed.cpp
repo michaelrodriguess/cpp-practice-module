@@ -31,7 +31,7 @@ Fixed::~Fixed( void )
 Fixed::Fixed( const Fixed &copy)
 {
     std::cout << "Copy constructor called" << std::endl;
-    *this = copy;
+    this->_valueFixedPoint  = copy.getRawBits();
 }
 
 // Overload operator
@@ -40,7 +40,7 @@ Fixed& Fixed::operator=( const Fixed &copy)
 {
     std::cout << "Copy assignment operator called" << std::endl;
     this->_valueFixedPoint =  copy.getRawBits();
-    return *this;
+    return ( *this );
 }
 
 // Member Functios of Class Fixed
