@@ -24,11 +24,9 @@ class Fixed
       Fixed( const float valueFloat );
       Fixed( const Fixed &fixedCopy);
       virtual ~Fixed( void );
-      
-      Fixed operator+( const Fixed &fixedType );
-      Fixed operator-( const Fixed &fixedType );
-      Fixed operator*( const Fixed &fixedType );
+
       Fixed &operator=( const Fixed &fixedType );
+      
       bool operator>( const Fixed &fixedType );
       bool operator<( const Fixed &fixedType );
       bool operator>=( const Fixed &fixedType );
@@ -36,6 +34,21 @@ class Fixed
       bool operator==( const Fixed &fixedType );
       bool operator!=( const Fixed &fixedType );
 
+      Fixed operator+( const Fixed &fixedType );
+      Fixed operator-( const Fixed &fixedType );
+      Fixed operator*( const Fixed &fixedType );
+      Fixed operator/( const Fixed &fixedType );
+
+      Fixed &operator++( void );
+      Fixed operator++( int );
+      Fixed &operator--( void );
+      Fixed operator--( int );
+
+      static Fixed &min(Fixed &a, Fixed &b);
+      static Fixed min(const Fixed a, const Fixed b);
+      static Fixed &max(Fixed &a, Fixed &b);
+      static Fixed max(const Fixed a, const Fixed b);
+      
       float   toFloat( void ) const;
       int     toInt( void ) const;
 
@@ -43,7 +56,7 @@ class Fixed
       int getRawBits( void ) const;
 
    private: 
-      int _valueFixedPoint;
+      int _rawValue;
       static const int _numberFractionalBit = 8;
       
 };
