@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 16:11:14 by microdri          #+#    #+#             */
-/*   Updated: 2023/06/07 11:06:58 by microdri         ###   ########.fr       */
+/*   Updated: 2023/06/20 16:30:07 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,14 @@ class Fixed
         Fixed( void );
         Fixed( const int valueInt );
         Fixed( const float valueFloat );
+        Fixed( const Fixed &copy);
+        Fixed &operator=( const Fixed &copy);
         ~Fixed( void );
 
         float   toFloat( void ) const;
         int     toInt( void ) const;
-        int     getValue( void ) const;
+        void setRawBits( int const raw );
+        int getRawBits( void ) const;
 
 
     private:
