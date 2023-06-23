@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 19:12:17 by microdri          #+#    #+#             */
-/*   Updated: 2023/06/22 16:10:27 by microdri         ###   ########.fr       */
+/*   Updated: 2023/06/22 21:01:38 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ ClapTrap::ClapTrap(void)
     this->_health = 10;
     this->_energyPoints = 10;
     this->_attackDamage = 0;
-    std::cout << "default constructor called" << std::endl;
+    std::cout << "ClapTrap default constructor called" << std::endl;
 }
 
 /* destructor */
 ClapTrap::~ClapTrap( void )
 {
-    std::cout << "destructor called" << std::endl;
+    std::cout << "ClapTrap " << this->_name << " destructor called" << std::endl;
 }
 
 /* constructor that gets the name in the parameters */
@@ -35,7 +35,7 @@ ClapTrap::ClapTrap( std::string name )
     this->_health = 10;
     this->_energyPoints = 10;
     this->_attackDamage = 0;
-    std::cout << "constructor that gets the name in the parameters called" << std::endl;
+    std::cout << "ClapTrap " << this->_name << " constructor called" << std::endl;
 }
 
 /* copy constructor */
@@ -45,7 +45,7 @@ ClapTrap::ClapTrap( const ClapTrap &copy )
     this->_health = copy._health;
     this->_energyPoints = copy._energyPoints;
     this->_attackDamage = copy._attackDamage;
-    std::cout << "Copy constructor called" << std::endl;
+    std::cout << "ClapTrap Copy constructor called" << std::endl;
 }
 
 /* Overload operator */
@@ -55,7 +55,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &other)
     this->_health = other._health;
     this->_energyPoints = other._energyPoints;
     this->_attackDamage = other._attackDamage;
-    std::cout << "Copy assignment operator called" << std::endl;
+    std::cout << "ClapTrap Copy assignment operator called" << std::endl;
     return ( *this );
 }
 

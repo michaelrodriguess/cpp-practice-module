@@ -6,11 +6,12 @@
 /*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 15:19:54 by microdri          #+#    #+#             */
-/*   Updated: 2023/06/22 16:17:21 by microdri         ###   ########.fr       */
+/*   Updated: 2023/06/22 23:29:49 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
 /* default constructor */
 ScavTrap::ScavTrap(void) : ClapTrap()
@@ -25,7 +26,7 @@ ScavTrap::ScavTrap(void) : ClapTrap()
 /* destructor */
 ScavTrap::~ScavTrap(void)
 {
-    std::cout << "destructor called" << std::endl;
+    std::cout << "ScavTrap " << this->_name << " destructor called." << std::endl;
 }
 
 /* constructor that gets the name in the parameters */
@@ -35,7 +36,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
     this->_health = 100;
     this->_energyPoints = 50;
     this->_attackDamage = 20;
-    std::cout << "ScavTrap constructor that gets the name in the parameters called" << std::endl;
+    std::cout << "ScavTrap " << this->_name << " constructor called." << std::endl;
 }
 
 /* copy constructor */
@@ -47,10 +48,30 @@ ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy)
 /* Overload operator */
 ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 {
-    this->_name = other._name;
-    this->_health = other._health;
-    this->_energyPoints = other._energyPoints;
-    this->_attackDamage = other._attackDamage;
-    std::cout << " ScavTrapCopy assignment operator called" << std::endl;
+    ClapTrap::operator=(other);
+    std::cout << " ScavTrap Copy assignment operator called" << std::endl;
     return (*this);
 }
+
+/* Member Functions */
+void    ScavTrap::guardGate( void )
+{
+    std::cout << "ScavTrap " << this->_name << " now is in Gate keeper mode." << std::endl;
+}
+/*
+void ScavTrap::attack(const std::string& target)
+{
+    if (this->_energyPoints <= 0 || this->_health <= 0)
+        std::cout << this->_name
+            << " failed to attack " <<
+            target << "." << std::endl;
+
+    if ( this->_energyPoints > 0 && this->_health > 0 )
+    {
+        std::cout << "ClapTrap " << this->_name  << " attacks " 
+        << target << ", causing " << this->_attackDamage 
+        << " points of damage!" << std::endl;
+        this->_energyPoints -= 1;
+    }
+    
+}*/
