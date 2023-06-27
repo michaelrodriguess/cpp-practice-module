@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 15:19:56 by microdri          #+#    #+#             */
-/*   Updated: 2023/06/22 21:00:52 by microdri         ###   ########.fr       */
+/*   Updated: 2023/06/27 18:01:55 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class ScavTrap : public ClapTrap
         ScavTrap( std::string name );
         ScavTrap( const ScavTrap &copy );
         ScavTrap &operator=(const ScavTrap &other);
-        ~ScavTrap();
+        virtual ~ScavTrap();
 
         void guardGate(); 
         void attack(const std::string& target);
