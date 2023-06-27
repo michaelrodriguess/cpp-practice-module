@@ -60,7 +60,7 @@ std::ostream &operator<<(std::ostream& outputStr, const Fixed &obj)
         return ( outputStr );
 }
 
-bool Fixed::operator>( const Fixed &fixedType)
+bool Fixed::operator>( const Fixed &fixedType) const
 {
     //std::cout << "Conditional > operator called" << std::endl;
     if ( this->getRawBits() > fixedType.getRawBits())
@@ -68,7 +68,7 @@ bool Fixed::operator>( const Fixed &fixedType)
     return ( false );
 }
 
-bool Fixed::operator<( const Fixed &fixedType)
+bool Fixed::operator<( const Fixed &fixedType) const
 {
     //std::cout << "Conditional < operator called" << std::endl;
     if ( this->getRawBits() < fixedType.getRawBits())
@@ -76,7 +76,7 @@ bool Fixed::operator<( const Fixed &fixedType)
     return ( false );
 }
 
-bool Fixed::operator>=( const Fixed &fixedType)
+bool Fixed::operator>=( const Fixed &fixedType) const
 {
     //std::cout << "Conditional >= operator called" << std::endl;
     if ( this->getRawBits() >= fixedType.getRawBits())
@@ -84,7 +84,7 @@ bool Fixed::operator>=( const Fixed &fixedType)
     return ( false );
 }
 
-bool Fixed::operator<=( const Fixed &fixedType)
+bool Fixed::operator<=( const Fixed &fixedType) const
 {
     //std::cout << "Conditional >= operator called" << std::endl;
     if ( this->getRawBits() <= fixedType.getRawBits())
@@ -92,7 +92,7 @@ bool Fixed::operator<=( const Fixed &fixedType)
     return ( false );
 }
 
-bool Fixed::operator==( const Fixed &fixedType)
+bool Fixed::operator==( const Fixed &fixedType) const
 {
     //std::cout << "Conditional >= operator called" << std::endl;
     if ( this->getRawBits() == fixedType.getRawBits())
@@ -100,7 +100,7 @@ bool Fixed::operator==( const Fixed &fixedType)
     return ( false );
 }
 
-bool Fixed::operator!=( const Fixed &fixedType)
+bool Fixed::operator!=( const Fixed &fixedType) const
 {
     //std::cout << "Conditional >= operator called" << std::endl;
     if ( this->getRawBits() != fixedType.getRawBits())
@@ -208,7 +208,7 @@ Fixed &Fixed::min(Fixed &a, Fixed &b)
 
 Fixed Fixed::min( const Fixed a, const Fixed b )
 {
-    if ( a.getRawBits() > b.getRawBits() )
+    if ( a > b )
         return (b);
     return (a);
 }
@@ -222,7 +222,7 @@ Fixed &Fixed::max(Fixed &a, Fixed &b)
 
 Fixed Fixed::max( const Fixed a, const Fixed b )
 {
-    if ( a.getRawBits() > b.getRawBits() )
+    if ( a > b )
         return (a);
     return (b);
 }

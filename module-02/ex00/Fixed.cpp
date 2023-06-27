@@ -12,8 +12,7 @@
 
 #include "Fixed.hpp"
 
-// Constructor e Destructor
-
+/* Constructor e Destructor */
 Fixed::Fixed( void )
 {
     this->_valueFixedPoint = 0;
@@ -26,16 +25,15 @@ Fixed::~Fixed( void )
 }
 
 
-// Copy constructor
-
+/* Copy constructor */
 Fixed::Fixed( const Fixed &copy)
 {
     std::cout << "Copy constructor called" << std::endl;
+    // *this = copy;
     this->_valueFixedPoint  = copy.getRawBits();
 }
 
-// Overload operator
-
+/* Overload operator */
 Fixed& Fixed::operator=( const Fixed &copy)
 {
     std::cout << "Copy assignment operator called" << std::endl;
@@ -43,8 +41,7 @@ Fixed& Fixed::operator=( const Fixed &copy)
     return ( *this );
 }
 
-// Member Functios of Class Fixed
-
+/* Member Functios of Class Fixed */
 void Fixed::setRawBits( int const raw )
 {
     this->_valueFixedPoint = raw;

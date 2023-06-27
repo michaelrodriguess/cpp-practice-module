@@ -27,12 +27,12 @@ class Fixed
 
       Fixed &operator=( const Fixed &fixedType );
       
-      bool operator>( const Fixed &fixedType );
-      bool operator<( const Fixed &fixedType );
-      bool operator>=( const Fixed &fixedType );
-      bool operator<=( const Fixed &fixedType );
-      bool operator==( const Fixed &fixedType );
-      bool operator!=( const Fixed &fixedType );
+      bool operator>( const Fixed &fixedType ) const;
+      bool operator<( const Fixed &fixedType ) const;
+      bool operator>=( const Fixed &fixedType ) const;
+      bool operator<=( const Fixed &fixedType ) const;
+      bool operator==( const Fixed &fixedType ) const;
+      bool operator!=( const Fixed &fixedType ) const;
 
       Fixed operator+( const Fixed &fixedType );
       Fixed operator-( const Fixed &fixedType );
