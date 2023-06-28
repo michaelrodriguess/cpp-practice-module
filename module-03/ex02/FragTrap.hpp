@@ -3,19 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: microdri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 14:51:38 by microdri          #+#    #+#             */
-/*   Updated: 2023/06/27 18:02:55 by microdri         ###   ########.fr       */
+/*   Updated: 2023/06/28 14:56:12 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRAGTRAP_HPP
 # define FRAGTRAP_HPP 
 
+# include <iostream>
+# include "ClapTrap.hpp"
+
 class FragTrap : public ClapTrap
 {
 	public: 
+
 		FragTrap( void );
 		FragTrap( std::string name );
 		FragTrap( const FragTrap &copy );
@@ -23,6 +27,6 @@ class FragTrap : public ClapTrap
 		virtual ~FragTrap();
 
 		void highFivesGuys( void );
-}
+};
 
 #endif 

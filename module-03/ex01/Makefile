@@ -2,7 +2,7 @@ SRCS			=	main.cpp \
 					ClapTrap.cpp \
 					ScavTrap.cpp
 					
-NAME			=  ClapTrapGo
+NAME			=  ScavTrapGo
 OBJS			= $(SRCS:.cpp=.o)
 CXX				= c++
 RM				= rm -f

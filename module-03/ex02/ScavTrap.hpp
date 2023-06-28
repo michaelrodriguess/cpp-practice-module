@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 15:19:56 by microdri          #+#    #+#             */
-/*   Updated: 2023/06/27 18:01:55 by microdri         ###   ########.fr       */
+/*   Updated: 2023/06/28 14:41:14 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ class ScavTrap : public ClapTrap
 
         void guardGate(); 
         void attack(const std::string& target);
-      
 
 };
-
 
 #endif 

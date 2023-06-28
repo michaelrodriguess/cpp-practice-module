@@ -1,8 +1,9 @@
 SRCS			=	main.cpp \
 					ClapTrap.cpp \
-					ScavTrap.cpp
-					
-NAME			=  ClapTrapGo
+					ScavTrap.cpp \
+					FragTrap.cpp
+
+NAME			=  FragTrapGo
 OBJS			= $(SRCS:.cpp=.o)
 CXX				= c++
 RM				= rm -f
