@@ -3,9 +3,10 @@ SRCS			=	main.cpp \
 					Cat.cpp \
 					Dog.cpp \
 					WrongAnimal.cpp \
-					WrongCat.cpp
+					WrongCat.cpp \
+					Brain.cpp
 					
-NAME			=  AnimalGo
+NAME			=  BrainGo
 OBJS			= $(SRCS:.cpp=.o)
 CXX				= c++
 RM				= rm -f

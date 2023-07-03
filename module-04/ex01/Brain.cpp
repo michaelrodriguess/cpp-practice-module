@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: microdri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 19:36:01 by microdri          #+#    #+#             */
-/*   Updated: 2023/06/29 20:52:12 by microdri         ###   ########.fr       */
+/*   Updated: 2023/07/02 15:11:44 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,18 @@ Brain::Brain(void)
 	std::cout << "Brain Constructor called." << std::endl;
 }
 
+/* Destructor */
+Brain::~Brain()
+{
+	std::cout << "Brain Destructor called." << std::endl;
+}
+
 /* Copy constructor  */
 Brain::Brain(const Brain &copy)
 {
 	for( int i = 0; i <= 100; i++ )
 		ideas[i] = copy.ideas[i];
 	std::cout << "Brain Copy constructor called." << std::endl;
-}
-
-/* Destructor */
-Brain::~Brain()
-{
-	std::cout << "Brain Destructor called." << std::endl;
 }
 
 /* Overload Operator */

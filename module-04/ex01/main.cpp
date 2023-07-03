@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: microdri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 12:13:59 by microdri          #+#    #+#             */
-/*   Updated: 2023/06/29 19:13:48 by microdri         ###   ########.fr       */
+/*   Updated: 2023/07/02 21:35:30 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
@@ -44,6 +45,32 @@ int main( void )
 	meta_wa->makeSound();
 	meta_wc->makeSound();
 
+	std::cout << "--------------------------------------------------------------------------" << std::endl;
+
+	std::cout << "create BRAIN for Animals now." << std::endl;
+	std::cout << std::endl;
+	std::cout << std::endl;
+
+	Animal *animalsCat[10];
+  	Animal *animalsDog[10];
+
+  	for (int i = 0; i < 10; i++)
+  	{
+   		animalsCat[i] = new Cat();
+  	}
+	for (int i = 0; i < 10; i++)
+	{
+    	delete animalsCat[i];
+	}
+
+	for (int i = 0; i < 10; i++)
+	{
+    	animalsDog[i] = new Dog();
+  	}
+	for (int i = 0; i < 10; i++)
+	{
+		delete animalsDog[i];
+	}
 
 	std::cout << std::endl;
 	std::cout << std::endl;
@@ -53,4 +80,33 @@ int main( void )
 	delete meta_c;
 	delete meta_wa;
 	delete meta_wc;
+}
+*/
+
+#include "Cat.hpp"
+#include "Dog.hpp"
+
+int main(void) {
+  Animal *animalsCat[10];
+  Animal *animalsDog[10];
+
+  for (int i = 0; i < 10; i++)
+  {
+    animalsCat[i] = new Cat();
+  }
+
+  for (int i = 0; i < 10; i++) {
+    delete animalsCat[i];
+  }
+
+	for (int i = 0; i < 10; i++)
+	{
+    	animalsDog[i] = new Dog();
+  	}
+	for (int i = 0; i < 10; i++)
+	{
+		delete animalsDog[i];
+	}
+
+  return 0;
 }
