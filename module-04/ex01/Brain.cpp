@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 19:36:01 by microdri          #+#    #+#             */
-/*   Updated: 2023/07/02 15:11:44 by microdri         ###   ########.fr       */
+/*   Updated: 2023/07/04 15:49:55 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Brain::~Brain()
 /* Copy constructor  */
 Brain::Brain(const Brain &copy)
 {
-	for( int i = 0; i <= 100; i++ )
+	for( int i = 0; i < 100; i++ )
 		ideas[i] = copy.ideas[i];
 	std::cout << "Brain Copy constructor called." << std::endl;
 }
@@ -43,7 +43,7 @@ Brain::Brain(const Brain &copy)
 /* Overload Operator */
 Brain& Brain::operator=(const Brain &other)
 {
-	for( int i = 0; i <= 100; i++ )
+	for( int i = 0; i < 100; i++ )
 		ideas[i] = other.ideas[i];
 	std::cout << "Brain Copy assignment operator called." << std::endl;
 	return (*this);

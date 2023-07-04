@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 12:30:35 by microdri          #+#    #+#             */
-/*   Updated: 2023/07/03 20:59:24 by microdri         ###   ########.fr       */
+/*   Updated: 2023/07/04 16:23:09 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ Dog::~Dog( void )
 }
 
 /* Copy constructor */
-Dog::Dog( const Dog &copy ) : Animal(copy)
+Dog::Dog( const Dog &copy )
 {
+	this->type = copy.type;
 	this->_dogBrain = new Brain(*copy._dogBrain);
 	std::cout << "Dog copy constructor called." << std::endl;
 }
@@ -35,8 +36,9 @@ Dog::Dog( const Dog &copy ) : Animal(copy)
 /* Overload Operator */
 Dog& Dog::operator=( const Dog &other )
 {
-	Animal::operator=(other);
+	std::cout << "Dog Copy assignment operator called." << std::endl;
 	this->_dogBrain = new Brain(*other._dogBrain);
+	Animal::operator=(other);
 	std::cout << "Dog Copy assignment operator called." << std::endl;
 	return ( *this );
 }

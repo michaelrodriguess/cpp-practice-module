@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 19:30:41 by microdri          #+#    #+#             */
-/*   Updated: 2023/07/03 20:16:16 by microdri         ###   ########.fr       */
+/*   Updated: 2023/07/04 16:25:23 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ class Brain
 	public:
 		Brain(void);
 		Brain(const Brain &other);
+		Brain &operator=(const Brain &other);\
 		~Brain();
 
-		Brain &operator=(const Brain &other);\
 		std::string ideas[100];
 };
 

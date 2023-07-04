@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 12:27:25 by microdri          #+#    #+#             */
-/*   Updated: 2023/07/03 21:09:21 by microdri         ###   ########.fr       */
+/*   Updated: 2023/07/04 15:11:35 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,4 @@ class Dog : public Animal
 
 };
 
-#endif
+#endif /* DOG_HPP */

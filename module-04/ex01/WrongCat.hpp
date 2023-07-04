@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 15:29:40 by microdri          #+#    #+#             */
-/*   Updated: 2023/07/03 21:09:42 by microdri         ###   ########.fr       */
+/*   Updated: 2023/07/04 15:12:06 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,4 @@ class WrongCat : public WrongAnimal
 
 };
 
-#endif
+#endif /* WRONGCAT_HPP */

@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 12:27:42 by microdri          #+#    #+#             */
-/*   Updated: 2023/07/03 21:06:06 by microdri         ###   ########.fr       */
+/*   Updated: 2023/07/04 15:11:33 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,4 @@ class Cat : public Animal
 
 };
 
-#endif
+#endif /* CAT_HPP */

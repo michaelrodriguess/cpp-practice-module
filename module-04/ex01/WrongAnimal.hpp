@@ -6,7 +6,7 @@
 /*   By: microdri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 15:25:59 by microdri          #+#    #+#             */
-/*   Updated: 2023/06/29 19:10:06 by microdri         ###   ########.fr       */
+/*   Updated: 2023/07/04 15:13:38 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,4 @@ class WrongAnimal
 		std::string type;
 };
 
-#endif
+#endif /* WRONGANIMAL_HPP */
