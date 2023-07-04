@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: microdri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 12:30:38 by microdri          #+#    #+#             */
-/*   Updated: 2023/06/29 20:50:32 by microdri         ###   ########.fr       */
+/*   Updated: 2023/07/03 20:59:24 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ Cat::~Cat( void )
 /* Copy constructor */
 Cat::Cat( const Cat &copy ) : Animal(copy)
 {
+	this->_catBrain = new Brain(*copy._catBrain);
 	std::cout << "Cat copy constructor called." << std::endl;
 }
 
@@ -35,6 +36,7 @@ Cat::Cat( const Cat &copy ) : Animal(copy)
 Cat& Cat::operator=( const Cat &other )
 {
 	Animal::operator=(other);
+	this->_catBrain = new Brain(*other._catBrain);
 	std::cout << "Cat Copy assignment operator called." << std::endl;
 	return ( *this );
 }

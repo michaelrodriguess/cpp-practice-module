@@ -6,51 +6,42 @@
 /*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 12:13:59 by microdri          #+#    #+#             */
-/*   Updated: 2023/07/03 20:59:24 by microdri         ###   ########.fr       */
+/*   Updated: 2023/07/03 21:14:20 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
 
 int main( void )
-{	
-	const Animal* meta_a = new Animal();
-	const Animal* meta_d = new Dog();
-	const Animal* meta_c = new Cat();
-	const WrongAnimal* meta_wa = new WrongAnimal();
-	const WrongAnimal* meta_wc = new WrongCat();
+{
 	
+	Animal *animals[6];
+		
 	std::cout << std::endl;
 	std::cout << std::endl;
 
-	std::cout << "REAL ANIMAL" << std::endl;
-	std::cout << meta_a->getType() << "." << std::endl;
-	std::cout << meta_d->getType() << "." << std::endl;
-	std::cout << meta_c->getType() << "." << std::endl;
-	meta_a->makeSound();
-	meta_d->makeSound();
-	meta_c->makeSound();
-
-	std::cout << std::endl;
-	std::cout << std::endl;
-
-	std::cout << "WRONG ANIMAL NOW" << std::endl;
-	std::cout << meta_wa->getType() << "." << std::endl;
-	std::cout << meta_wc->getType() << "." << std::endl;
-	meta_wa->makeSound();
-	meta_wc->makeSound();
-
+	for (int i = 0; i < 3; i++)
+	{	
+		animals[i] = new Dog();
+		animals[i]->makeSound();
+	}
 
 	std::cout << std::endl;
 	std::cout << std::endl;
 
-	delete meta_a;
-	delete meta_d;
-	delete meta_c;
-	delete meta_wa;
-	delete meta_wc;
+	for (int i = 3; i < 6; i++)
+	{
+		animals[i] = new Cat();
+		animals[i]->makeSound();
+	}
+
+	std::cout << std::endl;
+	std::cout << std::endl;
+	
+	for (int i = 0; i < 6; i++)
+	{
+		delete animals[i];
+	}
+
 }

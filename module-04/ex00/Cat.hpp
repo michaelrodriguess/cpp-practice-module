@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: microdri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 12:27:42 by microdri          #+#    #+#             */
-/*   Updated: 2023/06/29 17:17:30 by microdri         ###   ########.fr       */
+/*   Updated: 2023/07/03 21:05:57 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,6 @@ class Cat : public Animal
 		virtual ~Cat( void );
 
 		void makeSound( void ) const;
-
-	protected:
-	
-		std::string type;
 
 };
 

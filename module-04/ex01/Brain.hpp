@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: microdri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 19:30:41 by microdri          #+#    #+#             */
-/*   Updated: 2023/06/29 20:52:26 by microdri         ###   ########.fr       */
+/*   Updated: 2023/07/03 18:59:31 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ class Brain
 
 		Brain &operator=(const Brain &other);\
 		std::string ideas[100];
-
 };
 
 #endif /* BRAIN_HPP */

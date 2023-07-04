@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 17:24:55 by microdri          #+#    #+#             */
-/*   Updated: 2023/07/03 20:59:24 by microdri         ###   ########.fr       */
+/*   Updated: 2023/07/03 21:13:43 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Animal
 		virtual ~Animal( void );
 
 		std::string getType( void ) const;
-		virtual void makeSound( void ) const;
+		virtual void makeSound( void ) const = 0;
 
 	protected:
 	

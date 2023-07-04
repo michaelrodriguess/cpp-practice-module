@@ -15,11 +15,13 @@
 /* Constructor default and Destructor */
 Dog::Dog( void  ) : Animal("Dog")
 {
+	this->_dogBrain = new Brain();
 	std::cout << "Dog Constructor default called." << std::endl;
 }
 
 Dog::~Dog( void )
 {
+	delete _dogBrain;
 	std::cout << this->getType() << " destructor called." << std::endl; 
 }
 

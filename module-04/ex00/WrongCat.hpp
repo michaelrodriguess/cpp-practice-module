@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: microdri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 15:29:40 by microdri          #+#    #+#             */
-/*   Updated: 2023/06/29 19:10:03 by microdri         ###   ########.fr       */
+/*   Updated: 2023/07/03 21:06:45 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,6 @@ class WrongCat : public WrongAnimal
 		virtual ~WrongCat( void );
 
 		void makeSound( void ) const;
-
-	protected:
-	
-		std::string type;
 
 };
 

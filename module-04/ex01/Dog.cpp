@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: microdri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 12:30:35 by microdri          #+#    #+#             */
-/*   Updated: 2023/06/29 20:50:49 by microdri         ###   ########.fr       */
+/*   Updated: 2023/07/03 20:59:24 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ Dog::~Dog( void )
 /* Copy constructor */
 Dog::Dog( const Dog &copy ) : Animal(copy)
 {
+	this->_dogBrain = new Brain(*copy._dogBrain);
 	std::cout << "Dog copy constructor called." << std::endl;
 }
 
@@ -35,6 +36,7 @@ Dog::Dog( const Dog &copy ) : Animal(copy)
 Dog& Dog::operator=( const Dog &other )
 {
 	Animal::operator=(other);
+	this->_dogBrain = new Brain(*other._dogBrain);
 	std::cout << "Dog Copy assignment operator called." << std::endl;
 	return ( *this );
 }

@@ -6,7 +6,7 @@
 /*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 11:41:09 by microdri          #+#    #+#             */
-/*   Updated: 2023/07/03 20:59:24 by microdri         ###   ########.fr       */
+/*   Updated: 2023/07/03 21:01:11 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,4 @@ Animal::Animal( std::string type )
 std::string Animal::getType( void ) const
 {
 	return (this->type);
-}
-
-void Animal::makeSound( void ) const
-{
-	std::cout << this->type << " makes the sound Zzzzz aaah..." << std::endl;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: microdri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: microdri <microdri@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 12:27:25 by microdri          #+#    #+#             */
-/*   Updated: 2023/06/29 20:48:31 by microdri         ###   ########.fr       */
+/*   Updated: 2023/07/03 21:09:21 by microdri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,7 @@ class Dog : public Animal
 		virtual ~Dog( void );
 
 		void makeSound( void ) const;
-
-	protected:
-	
-		std::string type;
-
+		
 	private:
 		
 		Brain *_dogBrain;
